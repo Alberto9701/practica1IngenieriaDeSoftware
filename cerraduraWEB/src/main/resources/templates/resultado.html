@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado de Cerradura Kleene</title>
+</head>
+<body>
+    <h1>Resultado de la Cerradura <span th:text="${opcion}"></span></h1>
+    <p>Longitud: <span th:text="${longitud}"></span></p>
+    <ul>
+        <li th:each="cadena : ${resultado}">
+            <span th:text="${cadena}"></span>
+        </li>
+    </ul>
+</body>
+</html>
+ 
