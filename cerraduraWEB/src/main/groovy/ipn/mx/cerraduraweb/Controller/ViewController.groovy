@@ -15,7 +15,7 @@ class ViewController {
     }
 
     @PostMapping("/procesarFormulario")
-    String procesarFormulario(@RequestParam("longitud") int longitud, 
+    String procesarFormulario(@RequestParam("longitud") int longitud,  
                               @RequestParam("opcion") String opcion, 
                               RedirectAttributes redirectAttributes) {
         if (longitud < 0 || (!opcion.equals("estrella") && !opcion.equals("positiva"))) {
@@ -25,4 +25,3 @@ class ViewController {
         return "redirect:/" + opcion + "/" + longitud
     }
 }
-
